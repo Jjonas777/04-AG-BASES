@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = '04-ag-bases';
+  public title: string = '04-ag-bases';
+  public contador: number = 10;
+
+  contadorUnidad( valor: number ): void{ //contadorUnidad se infiere que es "public"
+    this.contador += valor;
+  }
+
+  resetear(): void{
+    this.contador = 10;
+  }
 }
